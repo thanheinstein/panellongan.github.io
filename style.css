@@ -13,14 +13,16 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* logo sát trái */
     align-items: center;
-    padding: 10px 50px;
-    background-color: #004080; /* xanh dương chủ đạo */
+    padding: 10px 20px;          /* giảm padding hai bên */
+    background-color: #004080;
 }
 
 header .logo img {
-    height: 60px;
+    height: 100px;   /* tăng kích thước logo */
+    width: auto;     /* giữ tỉ lệ */
+    display: block;
 }
 
 nav ul {
@@ -127,14 +129,5 @@ form button:hover {
         align-items: center;
     }
 }
-header .logo {
-    margin: 0;           /* bỏ khoảng cách mặc định */
-    padding: 0;          /* bỏ padding nếu có */
-    float: left;         /* logo ôm sát trái */
-}
 
-header .logo img {
-    max-height: 80px;    /* tăng chiều cao logo, bạn có thể điều chỉnh */
-    width: auto;         /* giữ tỉ lệ */
-    display: block;      /* tránh khoảng trắng dưới hình */
-}
+
