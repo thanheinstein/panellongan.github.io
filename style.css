@@ -75,7 +75,7 @@ nav ul li a:hover {
   flex: 1 0 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain; /* Giữ tỉ lệ gốc, không bị nhòe */
+  background-size: cover; /* Giữ tỉ lệ gốc, không bị nhòe */
   background-color: #000; /* Nếu ảnh không phủ kín, sẽ có nền đen bao quanh */
 }
 
@@ -203,6 +203,7 @@ form button:hover {
         align-items: center;
     }
 }
+
 
 
 
