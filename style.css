@@ -51,7 +51,7 @@ nav ul li a:hover {
 
 .hero {
   position: relative;
-  height: 100vh; /* Toàn màn hình */
+  height: 70vh; /* Giảm chiều cao, bạn có thể đổi thành 60vh hoặc 500px */
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -73,8 +73,10 @@ nav ul li a:hover {
 
 .slide {
   flex: 1 0 100%;
-  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; /* Giữ tỉ lệ gốc, không bị nhòe */
+  background-color: #000; /* Nếu ảnh không phủ kín, sẽ có nền đen bao quanh */
 }
 
 /* --- Animation trượt ngang --- */
@@ -91,12 +93,12 @@ nav ul li a:hover {
   100% { transform: translateX(0%); }
 }
 
-/* --- Lớp phủ giúp chữ nổi bật --- */
+/* --- Lớp phủ giúp chữ rõ hơn --- */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.35);
   z-index: 1;
 }
 
@@ -109,18 +111,18 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 30px;
+  padding: 10px 25px;
   background-color: #ff9900;
   color: #fff;
   text-decoration: none;
@@ -132,6 +134,7 @@ nav ul li a:hover {
 .btn:hover {
   background-color: #e68a00;
 }
+
 
 
 section {
@@ -200,6 +203,7 @@ form button:hover {
         align-items: center;
     }
 }
+
 
 
 
