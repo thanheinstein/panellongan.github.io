@@ -50,24 +50,89 @@ nav ul li a:hover {
 }
 
 .hero {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: #cce0ff;
+  position: relative;
+  height: 100vh; /* Toàn màn hình */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+/* --- PHẦN SLIDE --- */
+.slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%; /* 3 ảnh -> 3x100% */
+  height: 100%;
+  display: flex;
+  animation: slideAnimation 15s infinite;
+}
+
+.slide {
+  flex: 1 0 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* --- Animation trượt ngang --- */
+@keyframes slideAnimation {
+  0%   { transform: translateX(0%); }
+  30%  { transform: translateX(0%); }
+
+  33%  { transform: translateX(-100%); }
+  63%  { transform: translateX(-100%); }
+
+  66%  { transform: translateX(-200%); }
+  96%  { transform: translateX(-200%); }
+
+  100% { transform: translateX(0%); }
+}
+
+/* --- Lớp phủ giúp chữ nổi bật --- */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* --- Nội dung chữ và nút --- */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #004080;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ff9900;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
 }
+
+.btn:hover {
+  background-color: #e68a00;
+}
+
 
 section {
     padding: 50px 20px;
@@ -135,6 +200,7 @@ form button:hover {
         align-items: center;
     }
 }
+
 
 
 
